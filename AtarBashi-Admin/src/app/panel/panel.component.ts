@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+  styleUrls: ['./panel.component.css'],
 })
 export class PanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/auth/login']);
   }
 
+  
 }

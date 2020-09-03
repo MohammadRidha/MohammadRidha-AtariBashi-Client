@@ -4,11 +4,12 @@ import { AppRoutingModule } from '../app-routing.module';
 import { RouterModule } from '@angular/router';
 import { authRoutes } from './routes/routes';
 import { AuthComponent } from './auth.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from '../auth/components/login/login.component';
+import { RegisterComponent } from '../auth/components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
 import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   imports: [
@@ -21,8 +22,7 @@ import { AuthService } from './services/auth.service';
   declarations: [
     AuthComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent ] ,
     providers: [AuthService],
-  ]
 })
 export class AuthModule { }
