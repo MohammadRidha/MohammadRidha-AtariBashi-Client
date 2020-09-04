@@ -7,7 +7,6 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from '../auth/components/login/login.component';
 import { RegisterComponent } from '../auth/components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'; 
 import { AuthService } from './services/auth.service';
 
 
@@ -16,8 +15,7 @@ import { AuthService } from './services/auth.service';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(authRoutes),
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
   declarations: [
     AuthComponent,
