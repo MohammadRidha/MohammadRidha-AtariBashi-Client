@@ -3,15 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PanelModule } from './panel/panel.module';
-import { RouterModule } from '@angular/router';
-import { AuthModule } from './auth/auth.module';
 import { ErrorInterceptorProvider } from './Services/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'; 
 import { NgxUiLoaderModule, NgxUiLoaderConfig, POSITION, SPINNER, PB_DIRECTION,
   NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader';
+
+  import { AuthGuard } from './guards/auth.guard';
 
   const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     pbColor: 'red',
@@ -62,7 +61,8 @@ import { NgxUiLoaderModule, NgxUiLoaderConfig, POSITION, SPINNER, PB_DIRECTION,
     // NgProgressRouterModule
 
   ],
-  providers: [ErrorInterceptorProvider],
+  providers: [ErrorInterceptorProvider,
+              AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
