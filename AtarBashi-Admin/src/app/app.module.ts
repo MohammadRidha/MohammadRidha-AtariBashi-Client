@@ -6,27 +6,27 @@ import { AppComponent } from './app.component';
 import { ErrorInterceptorProvider } from './Services/error.interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+
 import { NgxUiLoaderModule, NgxUiLoaderConfig, POSITION, SPINNER, PB_DIRECTION,
-  NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader';
+   NgxUiLoaderRouterModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader';
+import { AuthGuard } from './guards/auth.guard';
 
-  import { AuthGuard } from './guards/auth.guard';
-
-  const ngxUiLoaderConfig: NgxUiLoaderConfig = {
-    pbColor: 'red',
-    //
-    bgsColor: 'red',
-    bgsPosition: POSITION.bottomRight,
-    bgsSize: 70,
-    //
-    fgsPosition: POSITION.bottomRight,
-    fgsSize: 70,
-    fgsColor: 'red',
-    bgsType: SPINNER.doubleBounce,
-    fgsType: SPINNER.doubleBounce,
-    pbDirection: PB_DIRECTION.leftToRight,
-    pbThickness: 4,
-  };
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  pbColor: 'red',
+  //
+  bgsColor: 'red',
+  bgsPosition: POSITION.bottomRight,
+  bgsSize: 70,
+  //
+  fgsPosition: POSITION.bottomRight,
+  fgsSize: 70,
+  fgsColor: 'red',
+  bgsType: SPINNER.doubleBounce,
+  fgsType: SPINNER.doubleBounce,
+  pbDirection: PB_DIRECTION.leftToRight,
+  pbThickness: 3,
+};
 
 @NgModule({
   declarations: [
@@ -37,32 +37,22 @@ import { NgxUiLoaderModule, NgxUiLoaderConfig, POSITION, SPINNER, PB_DIRECTION,
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 3000,
+      timeOut: 10000,
       positionClass: 'toast-bottom-center',
       preventDuplicates: true,
       progressBar: true,
       progressAnimation: 'decreasing'
-
     }),
     HttpClientModule,
-
-    // import NgxUI-LoaderModule
+    // Import NgxUiLoaderModule
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxUiLoaderRouterModule,
     NgxUiLoaderHttpModule.forRoot({ showForeground: true })
-    // NgProgressModule.withConfig({
-    //   trickleSpeed: 200,
-    //   thick: true,
-    //   min: 0,
-    //   max: 100,
-    //   color: 'red'
-    // }),
-    // NgProgressHttpModule,
-    // NgProgressRouterModule
-
+    ],
+  providers: [
+      ErrorInterceptorProvider,
+      AuthGuard
   ],
-  providers: [ErrorInterceptorProvider,
-              AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
