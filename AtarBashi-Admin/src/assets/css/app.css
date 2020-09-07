@@ -5156,7 +5156,8 @@ input[type='submit'].btn-block, input[type='reset'].btn-block, input[type='butto
 }
 .breadcrumb-item + .breadcrumb-item::before {
   display : inline-block;
-  padding-right : 0.5rem;
+  padding-left : 0.5rem;
+  padding-right : 0.3rem;
   color : #6C757D;
   content : '/';
 }
@@ -46240,7 +46241,7 @@ datetime .form-group {
   -webkit-box-shadow : 0 6px 14px 2px rgba(0, 0, 0, 0.2);
           box-shadow : 0 6px 14px 2px rgba(0, 0, 0, 0.2);
   border-radius : 50%;
-  padding : 4px 0 4px 4px;
+  padding : 4px;
   margin-left : 8px;
   margin-right : 12px;
 }

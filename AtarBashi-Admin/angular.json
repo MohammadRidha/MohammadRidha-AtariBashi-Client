@@ -29,8 +29,8 @@
               "src/assets/fonts/font-awesome/css/font-awesome.min.css",
               "src/assets/vendors/css/perfect-scrollbar.min.css",
               "src/assets/vendors/css/prism.min.css",
-              "node_modules/ngx-toastr/toastr.css",
               "src/assets/css/app.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -43,8 +43,7 @@
               "src/assets/vendors/js/screenfull.min.js",
               "src/assets/vendors/js/pace/pace.min.js",
               "src/assets/js/app-sidebar.js",
-              "src/assets/js/notification-sidebar.js",
-              "src/assets/js/customizer.js"
+              "src/assets/js/notification-sidebar.js"
             ]
           },
           "configurations": {
