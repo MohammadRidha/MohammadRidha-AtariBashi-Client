@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/components/userinfo/profile/profi
 import { DocumentsComponent } from './components/components/userinfo/documents/documents.component';
 import { UserService } from './services/user.service';
 
+
 @NgModule({
   imports: [
     PanelRoutingModule
@@ -18,7 +19,8 @@ import { UserService } from './services/user.service';
     ProfileComponent,
     DocumentsComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+
   ],
   providers: [
     UserService

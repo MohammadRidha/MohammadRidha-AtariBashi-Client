@@ -5,7 +5,6 @@ import { DashboardComponent } from './components/components/dashboard/dashboard.
 import { ProfileComponent } from './components/components/userinfo/profile/profile.component';
 import { DocumentsComponent } from './components/components/userinfo/documents/documents.component';
 
-
 const routes: Routes = [
   {
     path: '',

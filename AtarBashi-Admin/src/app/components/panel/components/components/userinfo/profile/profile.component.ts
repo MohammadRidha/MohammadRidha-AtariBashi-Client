@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/components/panel/services/user.service';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from 'src/app/components/auth/services/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+
+  constructor(private userService: UserService, private alertervice: ToastrService, private authService: AuthService) { }
 
   ngOnInit() {
+    this.loadUser();
+  }
+
+  loadUser() {
+    this.userService.getUser(this.authService.decodedToken.nameid).subscribe((user: User) => {
+      this.user = user;
+    }, error => {
+      this.alertervice.error(error);
+    }); 
   }
 
 }
