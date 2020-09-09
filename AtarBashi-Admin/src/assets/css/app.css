@@ -46512,7 +46512,7 @@ datetime .form-group {
   overflow : hidden;
   line-height : 2rem;
   padding : 7px 14px 7px 10px;
-  margin : 10px 13px;
+  margin : 10px 10px;
   border-radius : 3rem;
   color : #000000;
 }
@@ -46528,9 +46528,14 @@ datetime .form-group {
   overflow : hidden;
   font-size : 1rem;
 }
+.mlisub{
+  width: 90%;
+  margin: 0 auto;
+}
+
 .app-sidebar .navigation li ul li a, .off-canvas-sidebar .navigation li ul li a {
   display : block;
-  padding : 5px 55px 5px 18px;
+  padding : 5px 25px 5px 18px;
   margin : 8px 13px;
 }
 .app-sidebar .navigation > li.active > a, .off-canvas-sidebar .navigation > li.active > a {

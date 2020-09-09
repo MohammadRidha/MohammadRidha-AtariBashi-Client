@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { AuthService } from '../auth/services/auth.service';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-panel',
@@ -8,7 +9,6 @@ import { AuthService } from '../auth/services/auth.service';
   styleUrls: ['./panel.component.css']
 })
 export class PanelComponent  implements  OnInit {
-  
   jwtHelper = new JwtHelperService();
 
   constructor(private authService: AuthService) {}
