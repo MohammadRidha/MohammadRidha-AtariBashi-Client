@@ -4,24 +4,18 @@ import { map } from 'rxjs/operators';
 
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment';
-<<<<<<< HEAD
 
-=======
->>>>>>> 61ce96e98dfbdd0639f97508fac480dd95ebc572
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class AuthService {
-<<<<<<< HEAD
   baseUrl = environment.apiUrl + 'site/admin/auth/';
-=======
-  baseUrl = environment.apiUrl + '/site/admin/auth/';
->>>>>>> 61ce96e98dfbdd0639f97508fac480dd95ebc572
   jwtHelper = new JwtHelperService();
-  decodedToken: any;
+decodedToken: any;
 
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) { }
 
   login(model: any) {
     return this.http.post(this.baseUrl + 'login', model).pipe(
@@ -38,8 +32,9 @@ export class AuthService {
     return this.http.post(this.baseUrl + 'register', model);
   }
 
-  loggedIn() {
-    const token = localStorage.getItem('token');
-    return !this.jwtHelper.isTokenExpired(token);
-  }
+loggedIn() {
+  const token = localStorage.getItem('token');
+  return !this.jwtHelper.isTokenExpired(token);
+}
+
 }

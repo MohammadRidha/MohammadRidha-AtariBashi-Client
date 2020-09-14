@@ -4,10 +4,7 @@ import { PanelComponent } from './panel.component';
 import { DashboardComponent } from './components/components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/components/userinfo/profile/profile.component';
 import { DocumentsComponent } from './components/components/userinfo/documents/documents.component';
-<<<<<<< HEAD
-=======
 
->>>>>>> 61ce96e98dfbdd0639f97508fac480dd95ebc572
 
 const routes: Routes = [
   {

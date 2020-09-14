@@ -7,10 +7,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/components/userinfo/profile/profile.component';
 import { DocumentsComponent } from './components/components/userinfo/documents/documents.component';
 import { UserService } from './services/user.service';
-<<<<<<< HEAD
-
-=======
->>>>>>> 61ce96e98dfbdd0639f97508fac480dd95ebc572
+import { UserProfileResolver } from 'src/app/resolvers/userprofile.resolver';
 
 @NgModule({
   imports: [
@@ -22,15 +19,11 @@ import { UserService } from './services/user.service';
     ProfileComponent,
     DocumentsComponent,
     NavbarComponent,
-<<<<<<< HEAD
-    SidebarComponent,
-
-=======
     SidebarComponent
->>>>>>> 61ce96e98dfbdd0639f97508fac480dd95ebc572
   ],
   providers: [
-    UserService
+    UserService,
+    UserProfileResolver
   ],
 })
 
